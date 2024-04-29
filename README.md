@@ -89,7 +89,7 @@ lapply(pkgs_bioc, require, character.only = TRUE)
 
 # Structure du répertoire de travail
 
-La structure des dossiers peut être téléchargée depuis cette page sur GitHub : en cliquant sur le bouton vert "Code" et ensuite "Download Zip".
+La structure des dossiers peut être téléchargée depuis cette page sur GitHub : en cliquant sur le dossier zippé `ADAV24_multiAvance.zip` et ensuite "Download raw file" en haut à droite (comme illustré dans `Fig1.png`).
 
 Afin de mieux structurer ce module, nous allons travailler sur un ensemble de dossiers organisés de la façon suivante :  
 
