@@ -1,14 +1,7 @@
 ---
-title: "ADAV - Multivariié avancé : Démarrage"
+title: "ADAV - Multivarié avancé : Démarrage"
 subtitle: "Analyse de données multivariées : Méthodes supervisées et traitement de données -omiques"
-output:
-  html_document:
-    number_sections: yes
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, eval=FALSE)
-```
 
 Les quelques étapes suivantes sont à réaliser avant le début du module ADAV - Multivariié avancé, afin de préparer notre répertoire de travail et de démarrer efficacement ce module.
 
@@ -19,9 +12,7 @@ Excécutez toutes les commandes R de cette section pour tester si les packages n
 
 ## packages du CRAN
 
-```{r}
-# FROM CRAN ############################
-
+```r
 # packages to install from CRAN
 pkgs_cran <- c(
           "knitr",
@@ -61,8 +52,6 @@ if (!requireNamespace("Vennerable")){
   install.packages("Vennerable", repos="http://R-Forge.R-project.org",
                  dependencies="Depends")
 }
-
-
 ```
 
 
@@ -70,9 +59,7 @@ Si un message apparait pour mettre à jour les dépendances, répondez toujours 
 
 ## packages de Bioconductor
 
-```{r}
-# FROM BIOCONDUCTOR ############################
-
+```r
 pkgs_bioc <- c("ALL", "ComplexHeatmap",
                "SummarizedExperiment",
                "limma", "pcaMethods",
@@ -89,18 +76,13 @@ FUN_test_packages <- function(x){
 bioc_packages <- mapply(FUN_test_packages, pkgs_bioc)
 
 BiocManager::install(pkgs_bioc[bioc_packages])
-
-
-
 ```
 
 ## Charger tous les packages
 
 Testez enfin si tous les packages peuvent être chargés correctement dans votre session R.
 
-```{r}
-# Load all the packages ############################
-
+```r
 lapply(pkgs_cran, require, character.only = TRUE)
 lapply(pkgs_bioc, require, character.only = TRUE)
 ```
