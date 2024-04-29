@@ -1,16 +1,15 @@
----
-title: "ADAV - Multivarié avancé : Démarrage"
-subtitle: "Analyse de données multivariées : Méthodes supervisées et traitement de données -omiques"
----
+
+# "ADAV - Multivarié avancé : Démarrage"
+
 
 Les quelques étapes suivantes sont à réaliser avant le début du module ADAV - Multivariié avancé, afin de préparer notre répertoire de travail et de démarrer efficacement ce module.
 
 
-# Installation des packages R
+## Installation des packages R
 
 Excécutez toutes les commandes R de cette section pour tester si les packages nécessaires au module ne sont pas encore installés sur votre ordinateur, et les installer le cas échéant.
 
-## packages du CRAN
+### packages du CRAN
 
 ```r
 # packages to install from CRAN
@@ -57,7 +56,7 @@ if (!requireNamespace("Vennerable")){
 
 Si un message apparait pour mettre à jour les dépendances, répondez toujours par l'affirmative.
 
-## packages de Bioconductor
+### packages de Bioconductor
 
 ```r
 pkgs_bioc <- c("ALL", "ComplexHeatmap",
@@ -78,7 +77,7 @@ bioc_packages <- mapply(FUN_test_packages, pkgs_bioc)
 BiocManager::install(pkgs_bioc[bioc_packages])
 ```
 
-## Charger tous les packages
+### Charger tous les packages
 
 Testez enfin si tous les packages peuvent être chargés correctement dans votre session R.
 
@@ -87,7 +86,7 @@ lapply(pkgs_cran, require, character.only = TRUE)
 lapply(pkgs_bioc, require, character.only = TRUE)
 ```
 
-# Structure du répertoire de travail
+## Structure du répertoire de travail
 
 La structure des dossiers peut être téléchargée depuis cette page sur GitHub : en cliquant sur le dossier zippé `ADAV24_multiAvance.zip` et ensuite "Download raw file" en haut à droite (comme illustré dans `Fig1.png`).
 
@@ -109,7 +108,7 @@ Le dossier `2-demos_exercices` comporte les sous-dossiers suivants:
 
 
 
-# Données à télécharger 
+## Données à télécharger 
 
 Les dossiers de données suivants sont à télécharger depuis Moodle (Bibliothèque de données) et à placer dans un dossier nommé `0-data` :
 
